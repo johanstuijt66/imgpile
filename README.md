@@ -29,14 +29,19 @@ The javascript goes like this:
                 var last = images[images.length - 1];
                 var first = images[0];
 
+                // make sure opacity style is set in the HTML element itself
                 if(!(last.style.opacity)) last.style.opacity = 1;
+
+                // start fadeout animation
                 (function anim() {
                         if ((last.style.opacity -= .05) < 0) {
+                                // fadeout finished, manipulate DOM
                                 last.style.opacity = 0;
                                 link.removeChild(last);
                                 link.insertBefore(last, first);
                                 last.style.opacity = 1;
                         } else {
+                                // continue animation
                                 requestAnimFrame(anim);
                         }
                 })();
@@ -60,10 +65,10 @@ Of course, after loading the HTML of the page, all the links with CSS class "img
 
         // init: attach event handlers all around
         var links = document.querySelectorAll('a.imgpile');
-                for(i = 0; i < links.length; i++)
-                {
-                        if(links[i].addEventListener){
-                                links[i].addEventListener('click', imgpile);
+        for(i = 0; i < links.length; i++)
+        {
+               if(links[i].addEventListener){
+                        links[i].addEventListener('click', imgpile);
                 } else {
                         links[i].attachEvent('onclick', imgpile);
                 }
