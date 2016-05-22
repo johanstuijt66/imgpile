@@ -67,7 +67,7 @@ Of course, after loading the HTML of the page, all the links with CSS class "img
         var links = document.querySelectorAll('a.imgpile');
         for(i = 0; i < links.length; i++)
         {
-               if(links[i].addEventListener){
+                if(links[i].addEventListener){
                         links[i].addEventListener('click', imgpile);
                 } else {
                         links[i].attachEvent('onclick', imgpile);
