@@ -85,6 +85,6 @@ The last child is positioned normally, and all other images are positioned absol
 
 In my case, i create images all having the same size, but one could experiment with images of different sizes.
 
-You could also spice things up with declaring a few px offset for the pixels inside the pile so that they will 'stick out' on various sides. This would be a nice hint to the user to see what happens if i click on this...
+You could also spice things up with declaring a few px offset for the images inside the pile so that they will 'stick out' on various sides. This would be a nice hint to the user to see what happens if i click on this...
 
 johan 2016-05-22
